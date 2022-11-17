@@ -6,8 +6,7 @@ class FizzbuzzTest(unittest.TestCase):
     def test_number_divisible_by_3(self):
         input = 9
         expected_output = "Fizz"
-        actual_output = fizzbuzz(input)
-        self.assertEqual(expected_output, actual_output)
+        self.assertEqual(expected_output, fizzbuzz(input))
 
     def test_number_divisible_by_5(self):
         input = 10

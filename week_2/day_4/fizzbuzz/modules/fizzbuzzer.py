@@ -5,5 +5,4 @@ def fizzbuzz(number):
         return "Fizz"
     if number % 5 == 0:
         return "Buzz"
-    else:
-        return f"{number}"
+    return f"{number}"

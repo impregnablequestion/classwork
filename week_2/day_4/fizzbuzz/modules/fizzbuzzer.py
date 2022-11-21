@@ -1,8 +1,11 @@
 def fizzbuzz(number):
-    if number % 3 == 0 and number % 5 == 0:
+    divisible_by_3 = number % 3 == 0 
+    divisible_by_5 = number % 5 == 0
+
+    if divisible_by_3 and divisible_by_5:
         return "Fizzbuzz"
-    if number % 3 == 0:
+    if divisible_by_3:
         return "Fizz"
-    if number % 5 == 0:
+    if divisible_by_5:
         return "Buzz"
     return f"{number}"

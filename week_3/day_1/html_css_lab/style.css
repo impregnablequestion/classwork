@@ -1,8 +1,10 @@
-body > header{
+body > header > article{
+    margin: 0;
     background-color: dodgerblue;
     color: white;
 }
 
 body > footer{
+    margin: 0;
     background-color: dodgerblue;
 }

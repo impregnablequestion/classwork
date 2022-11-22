@@ -1,5 +1,5 @@
 body {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -8,7 +8,7 @@ header {
   color: #fff;
   font-size: 2rem;
   display: flex;
-  align-content: center;
+  align-items: center;
 }
 
 #logo {
@@ -68,6 +68,7 @@ nav > ul > li > a:hover{
   width: 8rem;
   height: 2.5rem;
   padding-left: 0.75rem;
+  border: 0;
   border-radius: 0.5rem;
   /* Style the form input elements using width, height, padding-left and border-radius */
 }
@@ -76,8 +77,8 @@ nav > ul > li > a:hover{
   width: 8rem;
   height: 2.5rem;
   font-size: 1rem;
-  border: 0.1rem;
-  border-radius: 0%;
+  border: 0rem;
+  border-radius: 5px;
   /* Select elements are not imput elements! Therefore we've given the <select> element it's own class  */
   /* They are notoriously difficult to style with css */
 }
@@ -115,7 +116,6 @@ nav > ul > li > a:hover{
 
 img {
   max-width: 100%;
-  /* Set the max-width property to 100% */
 }
 
 /* Let's take the training wheels off. Finish off the page by adding styles to the remaining blocks */
@@ -178,8 +178,6 @@ img {
 .links a:hover {
   text-decoration: none
 }
-
-/* Media Queries */
 
 @media (max-width: 720px) {
     /* Add some responsive code here */

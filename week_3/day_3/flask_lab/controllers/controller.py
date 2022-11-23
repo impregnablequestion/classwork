@@ -8,7 +8,7 @@ from models.orders import orders
 def show_orders():
     return render_template('index.html', title="Orders", orders=orders)
 
-@app.route('/orders/<int:index>')
+@app.route('/order/<int:index>')
 def show_order(index):
     order = orders[index]
     return render_template('order.html', title='Order', order=order)

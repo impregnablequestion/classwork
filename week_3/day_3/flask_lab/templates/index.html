@@ -7,15 +7,15 @@
         <h1>
             my orders
         </h1>
-        <h2>
+        <div class="order_container">
             <ul>
-            {% for order in orders %}
-               <li>
-                {{order.book_title}}, {{order.author}}
-               </li>
-            {% endfor %}
+                {% for order in orders %}
+                <li>
+                        <a href="/order/{{order.order_id}}">{{order.book_title}}, {{order.author}}</a>
+                </li>
+                {% endfor %}
             </ul>
-        </h2>
+        </div>
         
     </body>
 </html>

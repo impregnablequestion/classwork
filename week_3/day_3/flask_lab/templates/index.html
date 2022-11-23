@@ -1,10 +1,21 @@
 <html>
     <head>
-        <title>{{ title }} - My Todo List</title>
+        <title> My orders</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
         <h1>
-            My to-do list!
+            my orders
         </h1>
+        <h2>
+            <ul>
+            {% for order in orders %}
+               <li>
+                {{order.book_title}}, {{order.author}}
+               </li>
+            {% endfor %}
+            </ul>
+        </h2>
+        
     </body>
 </html>

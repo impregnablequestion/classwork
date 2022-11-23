@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template
+from models.to_do_list import tasks
 
 @app.route('/')
 def index():
@@ -7,4 +8,4 @@ def index():
 
 @app.route('/tasks')
 def show_tasks():
-    return render_template('index.html', title="Home")
+    return render_template('index.html', title="Home", tasks=tasks)

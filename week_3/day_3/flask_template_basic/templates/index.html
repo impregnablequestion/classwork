@@ -6,5 +6,12 @@
         <h1>
             My to-do list!
         </h1>
+            <ul>
+            {% for task in tasks %}
+                <li>
+                    {{ task.title }}: <b>{{ task.description }}</b>
+                </li>
+            {% endfor %}
+            </ul>
     </body>
 </html>

@@ -1,0 +1,12 @@
+body {
+    background-color: lightskyblue;
+    font-family: "Barlow";
+}
+
+form {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 1rem
+    
+}

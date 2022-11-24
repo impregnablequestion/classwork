@@ -19,6 +19,12 @@ header{
     gap: 3rem
 }
 
+.pizza_orders > li > h3 > a{
+    text-decoration: wavy;
+    color: hotpink;
+    font-weight: bold;
+}
+
 li{
     list-style: none;
 }
@@ -39,6 +45,5 @@ li{
 }
 
 .header_links > li > a:hover{
-    text-decoration:underline
-    
+    text-decoration:underline 
 }

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>My Orders</h2>
+    <ul class="pizza_orders">
+        {% for pizza in pizzas %}
+            <li>
+                <h3><a href="/orders/{{loop.index0}}">Order:</a></h3>
+                <p>{{ pizza.name }}</p>
+                <h3>Price:</h3>
+                <p>{{ pizza.price }}</p>
+                <h3>Gluten-Free:</h3>
+                <p>{{ pizza.gluten_free }}</p>
+                <h3>Size:</h3>
+                <p>{{ pizza.size }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

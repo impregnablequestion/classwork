@@ -1,4 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2></h2>
+    <h2>
+        what's on?
+    </h2>
+    <ul>
+        {% for event in events %}
+            <li><a href="/events/{{loop.index0}}"></a>name:</li>
+            <li>{{ event.name }}</a></li>
+            <li>date:</li>
+            <li>{{ event.date }}</a></li>
+        {% endfor %}
+    </ul>
 {% endblock %}

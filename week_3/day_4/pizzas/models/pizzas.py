@@ -6,3 +6,6 @@ pizza_3 = Pizza(10.00, "Margherita", True, "L")
 pizza_4 = Pizza(5.00, "Pepperoni", False, "S")
 
 pizzas = [pizza_1, pizza_2, pizza_3, pizza_4]
+
+def get_order(index):
+    return pizzas[index]

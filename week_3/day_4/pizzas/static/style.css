@@ -1,0 +1,24 @@
+body{
+    font-family: 'Comforta', sans-serif;
+}
+
+header{
+    background-color: hotpink;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    margin: 0;
+    padding: 2rem;
+    color: white
+}
+
+.pizza_orders > li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem
+}
+
+#footer{
+    
+}

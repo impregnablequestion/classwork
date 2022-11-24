@@ -1,3 +1,88 @@
 * {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Homemade Apple", cursive;  
+}
+
+body {
+    background-image: url("https://i.postimg.cc/nzdkmCrF/background-wallpaper.jpg");
+}
+
+header {
+    background-color: black;
+    color: lime;
+    text-align: center;
+    margin: 5rem;
+    border-radius: 4rem;
+    
+}
+
+header:hover {
+    background-color: hotpink;
+    opacity: .75;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+a{
+    text-decoration: none;
+    color: lime
+}
+
+ul{
+    list-style: none;
+}
+
+a:hover{
+    text-decoration:underline;
+    font-weight: bold;
+    font-size: larger;
+    cursor:crosshair
+}
+/* 
+header > ul > li > a {
+    text-decoration: none;
+    color
+} */
+
+main{
+    background-color: black;
+    opacity: .7;
+    color: lime
+}
+
+main{
+    background-color: black;
+    color: lime
+}
+
+footer{
+    background-color: black;
+    color: lime;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    opacity: .5
+}
+
+footer:hover{
+    background-color: hotpink;
+    color: lime;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    opacity: 1
+}
+#event_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+footer > h4 {
+    text-align: center;
+}
+
+.footernav {
+    display:flex;
+    justify-content: space-evenly;
 }

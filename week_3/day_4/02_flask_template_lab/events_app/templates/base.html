@@ -18,8 +18,12 @@
             </ul>
         </nav>        
     </header>
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
     <footer>
-        <h2>navigation</h2>
+        <h4>navigation</h4>
         <nav>
             <ul>
                 <li><a href="/">home</a></li>
@@ -27,4 +31,5 @@
         </nav>
     </footer>
 </body>
+
 </html>

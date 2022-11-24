@@ -3,16 +3,19 @@
     <h2>
     add an event:
     </h2>
-    <form>
+    <form id="event_form" action="/events" method="post">
         <label for="event_name">name:</label>
         <input type="text" name="event_name" id="event_name">
         <label for="event_date">date:</label>
-        <input type="datetime" name="event_date" id="event_date">
-        <label for="expected attendance">capacity:</label>
+        <input type="date" name="event_date" id="event_date">
+        <label for="event_number_of_guests">capacity:</label>
         <input type="text" name="event_number_of_guests" id="event_number_of_guests">
         <label for="event_location">venue:</label>
         <input type="text" name="event_location" id="event_location">
         <label for="event_description">description:</label>
-        <input type="text" name="event_location" id="event_description">
+        <input type="text" name="event_description" id="event_description">
+        <label for="recurring">recurring:</label>
+        <input type="checkbox" name="recurring" id="recurring">
+        <input type="submit" value="add event">
     </form>
 {% endblock %}

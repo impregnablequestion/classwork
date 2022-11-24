@@ -4,15 +4,16 @@
         what's on?
     </h2>
     <ul>
-        <li>name:</li>
-        <li>{{ event.name }}</li>
-        <li>date:</li>
-        <li>{{ event.date }}</li>
-        <li>expected attendance:</li>
-        <li>{{ event.number_of_guests }}</li>
-        <li>venue:</li>
-        <li>{{ event.location }}</li>
-        <li>description:</li>
-        <li>{{ event.description }}</li>
+        <li>name: {{ event.name }}</li>
+        <li>date: {{ event.date() }}</li>
+        <li>expected attendance: {{ event.number_of_guests }}</li>
+        <li>venue: {{ event.location }}</li>
+        <li>description: {{ event.description }}</li>
+        <li> recurring: {% if event.recurring %}
+            yes
+        {% else %}
+            no
+        {% endif %}
+        </li>
     </ul>
 {% endblock %}

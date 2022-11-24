@@ -5,10 +5,12 @@
     </h2>
     <ul>
         {% for event in events %}
-            <li><a href="/events/{{loop.index0}}"></a>name:</li>
-            <li>{{ event.name }}</a></li>
+            <li><a href="/events/{{loop.index0}}">name:</a>{{ event.name }}</a></li>
             <li>date:</li>
             <li>{{ event.date }}</a></li>
+            <form id="delete_form" action="/events/delete/{{ event.name }}" method="post">
+                <input type="submit" value="Delete event">
+            </form>
         {% endfor %}
     </ul>
 {% endblock %}

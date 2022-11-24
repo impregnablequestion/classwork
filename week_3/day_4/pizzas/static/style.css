@@ -19,6 +19,26 @@ header{
     gap: 3rem
 }
 
-#footer{
+li{
+    list-style: none;
+}
+
+.footer_links > li > a{
+    text-decoration:none;
+    color: black
+}
+
+.footer_links > li > a:hover{
+    text-decoration:underline;
+    
+}
+
+.header_links > li > a{
+    text-decoration: none;
+    color: white
+}
+
+.header_links > li > a:hover{
+    text-decoration:underline
     
 }

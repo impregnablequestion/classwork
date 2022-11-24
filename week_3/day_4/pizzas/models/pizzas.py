@@ -9,3 +9,6 @@ pizzas = [pizza_1, pizza_2, pizza_3, pizza_4]
 
 def get_order(index):
     return pizzas[index]
+
+def add_order(pizza):
+    pizzas.append(pizza)

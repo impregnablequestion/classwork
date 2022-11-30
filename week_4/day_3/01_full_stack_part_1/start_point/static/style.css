@@ -60,6 +60,10 @@ input, select, button {
   color: white;
 }
 
+li {
+  list-style: none;
+}
+
 .menu li a{
   text-decoration: none;
 }

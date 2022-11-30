@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <ul>
+        <li>description: {{ task.description }}</li>
+        <li>user: {{task.user.first_name}} {{task.user.last_name}}</li>
+        <li>duration: {{ task.duration }}</li>
+        <li>completed? {{ task.completed }}</li>
+        <li><a href="/tasks/{{task.id}}/edit">edit</a></li>
+    </ul>
+{% endblock %}

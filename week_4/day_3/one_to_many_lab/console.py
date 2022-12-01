@@ -12,5 +12,10 @@ author2 = Author('Shola', 'von Reinhold')
 author_repository.save(author1)
 author_repository.save(author2)
 
+found = author_repository.select(author1.id)
+
+author_repository.delete(author2)
+
+
 
 pdb.set_trace()

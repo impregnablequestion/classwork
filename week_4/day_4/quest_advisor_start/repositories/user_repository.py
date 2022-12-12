@@ -46,10 +46,7 @@ def locations(user):
     visits ON visits.location_id = locations.id WHERE user_id = %s"""
     values = [user.id]
     results = run_sql(sql, values)
-    if results:
-        for row in results:
-            location = Location(row['name'], row['category'], row['id'])
-            locations.append(location)
-        return locations
-    else:
-        return "user has been to no locations"
+    for row in results:
+        location = Location(row['name'], row['category'], row['id'])
+        locations.append(location)
+    return locations

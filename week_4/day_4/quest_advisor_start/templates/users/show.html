@@ -4,5 +4,10 @@
 <h1> {{user.name}} </h1>
 
 <h3>Visited:</h3>
+<ul>
+    {% for location in locations %}
+        <li>{{location.name}}</li>  
+    {% endfor %}
+</ul>
 
 {% endblock %}

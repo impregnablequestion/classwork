@@ -6,12 +6,13 @@ const CountrySelector = ({countries, onCountrySelected}) => {
         return <OptionItem key={index} country={country} index={index}></OptionItem>
     })
 
-    const handleChange = () => {
-
+    const handleChange = function(event) {
+        const chosenCountry = countries[event.target.value];
+        onCountrySelected(chosenCountry);
     }
 
     return(
-        <select defaultValue="" onChange={handleChange()}>
+        <select defaultValue="" onChange={handleChange}>
             <option value="">what's your favourite country?</option>
             {countryOptions}
         </select>

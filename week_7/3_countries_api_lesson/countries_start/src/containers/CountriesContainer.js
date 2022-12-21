@@ -12,7 +12,7 @@ const CountryContainer = () => {
       getCountries();
     }, [])
 
-    const onCountryClicked = function (country) {
+    const onCountrySelected = function (country) {
         setSelectedCountry(country);
     }
 
@@ -24,11 +24,11 @@ const CountryContainer = () => {
 
     return (
         <div className="main-container">
-            <CountrySelector countries={countries} onCountrySelected={onCountryClicked}></CountrySelector>
+            <CountrySelector countries={countries} onCountrySelected={onCountrySelected}></CountrySelector>
             {/* <CountryList countries={countries} onCountryClicked={onCountryClicked}/> */}
-            {selectedCountry? 
+            {selectedCountry ? 
             <CountryDetail country={selectedCountry}></CountryDetail>
-            : <p className='country-detail'>The capital of Ireland is Dublin</p>}
+            : null}
         </div>
     )
 }

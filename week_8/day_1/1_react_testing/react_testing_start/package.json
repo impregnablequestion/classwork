@@ -13,6 +13,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll",
+    "test:e2e": "cypress open",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -32,6 +33,6 @@
   },
   "devDependencies": {
     "@testing-library/react": "^12.1.5",
-    "cypress": "^10.1.0"
+    "cypress": "^10.11.0"
   }
 }

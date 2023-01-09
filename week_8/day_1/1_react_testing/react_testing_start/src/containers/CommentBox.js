@@ -27,7 +27,7 @@ const CommentBox = () => {
 
   return (
     <>
-      <h1>Comments</h1>
+      <h2>Comments</h2>
       <CommentList comments={comments} />
       <h2>Add a comment:</h2>
       <CommentForm onCommentSubmit={(comment) => addComment(comment)}/>

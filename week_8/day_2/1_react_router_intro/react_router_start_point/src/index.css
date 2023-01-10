@@ -1,5 +1,39 @@
 body {
+  text-align: center;
   margin: 0;
-  padding: 0;
+  padding: 1;
   font-family: sans-serif;
+}
+
+.forbidden {
+  text-align: center;
+  padding: 20rem;
+  background-image: url("https://www.ancient-origins.net/sites/default/files/field/image/forbidden-fruit.jpg");
+}
+
+.nav {
+  margin: 0;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: darkblue;
+  color: white
+}
+
+.nav > li {
+  list-style: none;
+}
+
+.pricing {
+  list-style: none;
+  
+}
+
+a {
+  text-decoration: none;
+  color: white
+}
+
+a:hover {
+  text-decoration: underline;
 }

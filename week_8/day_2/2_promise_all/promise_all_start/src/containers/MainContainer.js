@@ -5,8 +5,9 @@ import './MainContainer.css';
 
 const MainContainer = () => {
 
-    const [ characters, setCharacters ] = useState( [] )
-    const [ selectedCharacter, setSelectedCharacter ] = useState( null )
+    const [ characters, setCharacters ] = useState( [] );
+    const [ selectedCharacter, setSelectedCharacter ] = useState( null );
+    const [ episodes, setEpisodes ] = useState(null);
 
     useEffect( () => {
         fetch( 'https://rickandmortyapi.com/api/character/' )
@@ -15,14 +16,23 @@ const MainContainer = () => {
     }, [] )
 
     const handleSelectChange = ( character ) => {
-        setSelectedCharacter( character );
+        const episodePromises = character.episode.map(episodeURL=>{
+            return fetch(episodeURL).then(response => response.json());
+        });
+
+        Promise.all(episodePromises)
+            .then(data => {
+                setEpisodes(data);
+                setSelectedCharacter(character);
+            })
+
     }
 
     return (
         <div>
             <h1>Characters</h1>
             <CharacterSelect characters={ characters } handleSelectChange={ handleSelectChange } />
-            { selectedCharacter ? <CharacterDetail character={ selectedCharacter } /> : null }
+            { selectedCharacter ? <CharacterDetail character={ selectedCharacter } episodes = {episodes}/> : null }
         </div>
     )
 }

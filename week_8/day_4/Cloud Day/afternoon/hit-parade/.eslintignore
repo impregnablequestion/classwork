@@ -1,4 +1,0 @@
-/build
-/cypress
-*.test.js
-cypress.config.js

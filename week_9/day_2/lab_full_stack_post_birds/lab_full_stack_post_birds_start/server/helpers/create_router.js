@@ -29,6 +29,18 @@ const createRouter = function (collection) {
       });
   });
 
+  router.post('/', (req, res) => {
+    const object = req.body;
+    
+    collection
+    .insertOne(object)
+    .then(result => res.json(result))
+    .catch(error => {
+      console.log(error);
+      res.status(500);
+    });
+  });
+
   return router;
 };
 

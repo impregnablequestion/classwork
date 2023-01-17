@@ -20,7 +20,6 @@ const SightingsForm = ({addSighting}) => {
         postSighting(formData).then((data)=>{
             addSighting(data);
         })
-        // Reset the form input values
         setFormData({
             species: "",
             location: "",

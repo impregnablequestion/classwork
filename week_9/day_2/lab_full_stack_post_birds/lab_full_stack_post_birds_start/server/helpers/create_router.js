@@ -33,12 +33,26 @@ const createRouter = function (collection) {
     const object = req.body;
     
     collection
-    .insertOne(object)
-    .then(result => res.json(result))
-    .catch(error => {
-      console.log(error);
-      res.status(500);
-    });
+      .insertOne(object)
+      .then(result => res.json(result.ops[0]))
+      .catch(error => {
+        console.log(error);
+        res.status(500);
+      }
+    );
+  });
+
+  router.delete('/:id', (req, res) => {
+    const id = ObjectID(req.params.id);
+
+    collection
+      .deleteOne({_id: id})
+      .then(result => res.json(result))
+      .catch(error => {
+        console.log(error);
+        res.status(500);
+      }
+    );
   });
 
   return router;

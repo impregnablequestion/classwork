@@ -1,3 +1,4 @@
+// @ts-ignore
 use games_hub;
 db.dropDatabase();
 

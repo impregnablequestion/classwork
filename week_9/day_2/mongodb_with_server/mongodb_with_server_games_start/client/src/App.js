@@ -28,7 +28,6 @@ function App() {
       temp.splice(toDel, 1);
       setGames(temp);
     })
-
   }
   
   if (!games) return <h1>Loading</h1>

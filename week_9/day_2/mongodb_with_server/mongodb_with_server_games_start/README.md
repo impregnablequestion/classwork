@@ -30,7 +30,7 @@ Run express (leave running in a terminal window).  Within the server folder:
 npm run server:dev
 ```
 
-Run React environment (leave running in a terminal window).  Within client folder:
+Run React development environment (leave running in a terminal window).  Within client folder:
 
 ```
 npm start

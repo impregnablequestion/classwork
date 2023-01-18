@@ -1,31 +1,39 @@
+import { useEffect, useState } from "react"
 import BookingList from "../components/BookingList";
 import BookingForm from "../components/BookingForm";
-import { useEffect, useState } from "react"
+import { getBookings } from "../services/BookingService";
+
 
 const BookingContainer = () => {
 
-    const [bookingList, setBookingList] = useState([
-        {
-        guest_name: "Charles Olivera",
-        email: "charlieolives@gmail.com",
-        checked_in: true
-        },
-        {
-        guest_name: "Dustin Porier",
-        email: "paidinfull@gmail.com",
-        checked_in: true
-        }
-    ]);
+    const [bookingList, setBookingList] = useState([]);
+
+    const addBooking = (booking) => {
+        console.log("added booking")
+        const tempList = [...bookingList];
+        tempList.push(booking);
+        setBookingList(tempList);
+    }
     
-    // useEffect(()=>{
-        
-    // }, [])
+    
+    const removeBooking = (id) => {
+        const tempList = [...bookingList]
+        const index = tempList.map(booking => booking._id).indexOf(id);
+        tempList.splice(index, 1)
+        setBookingList(tempList)
+    }
+
+
+    useEffect(()=>{
+        getBookings()
+        .then(bookings => setBookingList(bookings))
+    }, [])
 
     return(
         <>
             <p>container</p>
-            <BookingForm/>
-            <BookingList bookingList = {bookingList}/>
+            <BookingForm addBooking = {addBooking}/>
+            <BookingList bookingList = {bookingList} removeBooking={removeBooking}/>
         </>
     )
 }

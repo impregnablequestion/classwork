@@ -1,3 +1,32 @@
 .App {
   text-align: center;
 }
+
+h1 {
+  background-color: #74b3ceff;
+  margin: 1rem;
+  padding: 2rem;
+  font-size: 50px;
+}
+
+.container {
+  display: grid;
+}
+
+img {
+  width: 10rem;
+}
+
+#bookings {
+  background-color: #74b3ceff;
+}
+
+#booking-form {
+  background-color: #74b3ceff;
+}
+
+/* --dark-sky-blue: #74b3ceff;
+--steel-teal: #508991ff;
+--prussian-blue: #172a3aff;
+--warm-black: #004346ff;
+--mountain-meadow: #09bc8aff; */

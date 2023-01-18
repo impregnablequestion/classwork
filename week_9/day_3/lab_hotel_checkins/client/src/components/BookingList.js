@@ -1,11 +1,17 @@
 import BookingItem from "./BookingItem";
 
-const BookingList = () => {
+const BookingList = ({bookingList}) => {
+
+    console.log(bookingList)
+
+    const displayBookings = bookingList.map((booking, index) => {
+        return <BookingItem booking={booking} key={index}/> 
+    });
+
     return(
-        <>
-        <p>booking list</p>
-        <BookingItem/>
-        </>
+        <ul>
+            {displayBookings}
+        </ul>
     )
 }
 

@@ -1,6 +1,7 @@
-const BookingItem = () => {
+const BookingItem = ({booking, index}) => {
+
     return(
-        <p>item</p>
+        <p>{booking.guest_name}: {booking.email} — {booking.checked_in ? "true":"false"}</p>
     )
 }
 

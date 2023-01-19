@@ -9,7 +9,7 @@ const BookingList = ({bookingList, removeBooking}) => {
     });
 
     return(
-        <ul>
+        <ul id="bookings">
             {displayBookings}
         </ul>
     )

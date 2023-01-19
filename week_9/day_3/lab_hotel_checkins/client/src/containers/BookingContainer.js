@@ -30,11 +30,11 @@ const BookingContainer = () => {
     }, [])
 
     return(
-        <>
-            <p>container</p>
+        <div className="container">
             <BookingForm addBooking = {addBooking}/>
+            <img src="https://images.pexels.com/photos/7820327/pexels-photo-7820327.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="reception"/>
             <BookingList bookingList = {bookingList} removeBooking={removeBooking}/>
-        </>
+        </div>
     )
 }
 

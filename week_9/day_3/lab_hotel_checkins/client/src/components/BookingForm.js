@@ -30,7 +30,7 @@ const BookingForm = ({addBooking}) => {
     }
 
     return(
-        <div>
+        <div id="booking-form">
             <form onSubmit={handleSubmit}>
                 <input type="text"
                     id="guest_name"
